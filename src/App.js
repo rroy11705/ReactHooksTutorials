@@ -5,6 +5,7 @@ import EffectCounter from './components/EffectCounter';
 import ContextExample from './components/ContextExample';
 import { UserProvider } from './context/userContext';
 import RefExample from './components/RefExample';
+import CallbackExample from './components/CallbackExample';
 
 function App() {
   const [user, setUser] = React.useState({
@@ -61,7 +62,8 @@ function App() {
       <button type="button" onClick={handleLogin}>
         Login
       </button> */}
-      <RefExample />
+      {/* <RefExample /> */}
+      <CallbackExample />
     </div>
   );
 }

@@ -6,6 +6,8 @@ import ContextExample from './components/ContextExample';
 import { UserProvider } from './context/userContext';
 import RefExample from './components/RefExample';
 import CallbackExample from './components/CallbackExample';
+import UseMemoExample from './components/UseMemoExample'
+import useWindowDimensions from './hooks/useWindowDimensions';
 
 function App() {
   const [user, setUser] = React.useState({
@@ -13,6 +15,8 @@ function App() {
     lastName: '',
     email: ''
   });
+
+  const { width, height } = useWindowDimensions();
 
   const handleLogin = () => {
     setUser({ firstName: 'John', lastName: 'Doe', email: 'john@gmail.com' });
@@ -63,7 +67,11 @@ function App() {
         Login
       </button> */}
       {/* <RefExample /> */}
-      <CallbackExample />
+      {/* <CallbackExample /> */}
+      {/* <UseMemoExample /> */}
+      <h1>Window Dimensions</h1>
+      <p>Width: {width} </p>
+      <p>Height: {height} </p>
     </div>
   );
 }

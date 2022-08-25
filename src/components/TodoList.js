@@ -37,19 +37,23 @@ const TodoList = () => {
     }
 
     const sortByEarliest = () => {
-        let newList = todoList;
-        newList.sort((a, b) => {
-            return a.createdAt - b.createdAt
-        })
-        setTodoList(newList);
+        setTodoList(prevState => {
+            let newList = prevState;
+            newList.sort((a, b) => {
+                return a.createdAt - b.createdAt
+            })
+            return [...newList]
+        });
     }
 
     const sortByLatest = () => {
-        let newList = todoList;
-        newList.sort((a, b) => {
-            return b.createdAt - a.createdAt
-        })
-        setTodoList(newList);
+        setTodoList(prevState => {
+            let newList = prevState;
+            newList.sort((a, b) => {
+                return b.createdAt - a.createdAt
+            })
+            return [...newList]
+        });
     }
 
     const todoListElement = todoList.map((todo, index) => (

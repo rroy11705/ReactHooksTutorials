@@ -8,6 +8,8 @@ import RefExample from './components/RefExample';
 import CallbackExample from './components/CallbackExample';
 import UseMemoExample from './components/UseMemoExample'
 import useWindowDimensions from './hooks/useWindowDimensions';
+import FetchUserData from './components/FetchUserData';
+import TodoList from './components/TodoList';
 
 function App() {
   const [user, setUser] = React.useState({
@@ -69,9 +71,12 @@ function App() {
       {/* <RefExample /> */}
       {/* <CallbackExample /> */}
       {/* <UseMemoExample /> */}
-      <h1>Window Dimensions</h1>
+      {/* <h1>Window Dimensions</h1>
       <p>Width: {width} </p>
       <p>Height: {height} </p>
+      <h1>Fetch User Data</h1>
+      <FetchUserData /> */}
+      <TodoList />
     </div>
   );
 }
